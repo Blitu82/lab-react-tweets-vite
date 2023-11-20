@@ -11,22 +11,11 @@ function Tweet(props) {
       <ProfileImage image={props.tweet.user.image} />
       <div className="body">
         <div className="top">
-          <span className="user">
-            <User
-              name={props.tweet.user.name}
-              handle={props.tweet.user.handle}
-            />
-          </span>
-          <span className="timestamp">
-            <Timestamp time={props.tweet.timestamp} />
-          </span>
+          <User name={props.tweet.user.name} handle={props.tweet.user.handle} />
+          <Timestamp time={props.tweet.timestamp} />
         </div>
-        <p className="message">
-          <Message message={props.tweet.message} />
-        </p>
-        <div className="actions">
-          <Actions />
-        </div>
+        <Message message={props.tweet.message} />
+        <Actions />
       </div>
     </div>
   );
